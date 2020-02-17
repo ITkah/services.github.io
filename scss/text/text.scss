@@ -1,0 +1,23 @@
+.title-xl {
+    text-align: center;
+    padding: 20px 0;
+    background: #3aa4dd;
+    color: #fff;
+    position: relative;
+    font: 700 1.25rem 'Montserrat', sans-serif;
+    margin-bottom: 50px;
+    @media (max-width: 990px) {
+        margin-bottom: 35px;
+    }
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 65px;
+        background: #3aa4dd;
+        left: -150%;
+        top: 0;
+        z-index: -2;
+        width: 300%;
+    }
+}

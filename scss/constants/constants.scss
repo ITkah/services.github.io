@@ -3,6 +3,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 p,
@@ -38,6 +39,26 @@ main {
         padding: 0 30px;
     }
     @media (max-width: 576px) {
-        padding: 0 20px;
+        padding: 0 15px;
     }
+}
+
+.margin {
+    margin-bottom: 60px;
+    @media (max-width: 990px) {
+        margin-bottom: 35px;
+    }
+}
+
+.slider {
+    width: 100%;
+}
+
+.slick-slide {
+    margin: 0px 20px;
+    outline: none;
+}
+
+.slick-slide img {
+    width: 100%;
 }

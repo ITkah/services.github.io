@@ -1,0 +1,24 @@
+.btn-dark {
+    background-color: #3aa4dd;
+    border: 1px solid #3aa4dd;
+    border-radius: 16px;
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    font: 600 1rem 'Montserrat', sans-serif;
+    @media (max-width: 990px) {
+        padding: 10px;
+    }
+}
+
+.btn-transparent {
+    color: #3aa4dd;
+    border: 1px solid #3aa4dd;
+    border-radius: 16px;
+    padding: 15px 5px;
+    text-align: center;
+    font: 600 1rem 'Montserrat', sans-serif;
+    @media (max-width: 990px) {
+        padding: 10px;
+    }
+}

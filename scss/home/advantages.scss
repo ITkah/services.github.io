@@ -1,0 +1,29 @@
+.advantages-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 25px;
+    position: relative;
+    top: -20px;
+    @media (max-width: 990px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
+
+.advantages-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+        height: auto;
+        max-width: 100%;
+    }
+    p {
+        text-align: center;
+        font: 700 1rem 'Montserrat', sans-serif;
+    }
+}
