@@ -15,20 +15,29 @@ $( document ).ready(function() {
     }
   );
 
+  $(".nav-link").hover(
+    function() {
+        $(".box-sm-link").hide();
+        $(this).next(".box-sm-link").show();
+    },
+  );
+
   $(window).resize(function() {
       if ($(window).width() < 990) {
           $('.desk-call-hover').unbind('mouseenter mouseleave');
+          $('.nav-link').unbind('mouseenter mouseleave')
       }
   });
 
   $(".hover-act").on("click", function(e){
     e.preventDefault();
-    $(this).find("nav-desk-box-links").toggle();
+    $(this).find("nav-desk-box-links").fadeToggle(100);
   });
 
   $(".btn-menu").on("click", function(){
     $("nav").slideToggle(100);
   });
+
 
   $('.team .responsive').slick({
     dots: false,

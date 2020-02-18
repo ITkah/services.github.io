@@ -6,6 +6,7 @@
     @media (max-width: 990px) {
         display: flex;
         flex-direction: column;
+        margin-top: 5px;
     }
     .slick-prev:before {
         content: url(../img/banner/left.png);
@@ -23,20 +24,20 @@
         position: relative;
     }
     .slick-next {
-        right: 370px;
+        right: 310px;
         @media (max-width: 576px) {
             right: -10px;
         }
     }
     .slick-prev {
-        left: -15px;
+        left: 5px;
         @media (max-width: 576px) {
             left: -10px;
         }
     }
     .slick-dots {
         bottom: 5px;
-        left: -180px;
+        left: -172px;
         @media (max-width: 990px) {
             bottom: -35px;
             left: 0;
