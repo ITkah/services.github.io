@@ -215,7 +215,7 @@ header {
             content: '';
             display: block;
             position: absolute;
-            height: 50px;
+            height: 49px;
             background: #3aa4dd;
             left: -150%;
             top: 0;
@@ -230,7 +230,10 @@ header {
         width: 100%;
         transition: .3s;
         &:hover {
-            background: #ccc9c9;
+            background: #f2f5f7;
+            a {
+                color: #3aa4dd;
+            }
             @media (max-width: 990px) {
                 background: transparent;
             }
@@ -266,7 +269,7 @@ header {
     .nav-desk-box-links {
         display: none;
         position: absolute;
-        background: #ccc9c9;
+        background: #f2f5f7;
         z-index: 999;
         width: 100%;
         padding: 15px;
@@ -278,7 +281,7 @@ header {
         }
         .nav-wrapper {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
             grid-gap: 25px;
             @media (max-width: 990px) {
                 grid-template-columns: 1fr;
