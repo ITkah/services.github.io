@@ -4,7 +4,8 @@
     grid-gap: 25px;
     margin-top: 25px;
     @media (max-width: 990px) {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
     }
     .slick-prev:before {
         content: url(../img/banner/left.png);
@@ -12,11 +13,17 @@
     .slick-next:before {
         content: url(../img/banner/right.png);
     }
+
+    .slick-prev, .slick-next {
+        top: 94%;
+        z-index: 999;
+    }
     .slick-prev:before, .slick-next:before {
         opacity: 1;
+        position: relative;
     }
     .slick-next {
-        right: -15px;
+        right: 370px;
         @media (max-width: 576px) {
             right: -10px;
         }
@@ -27,6 +34,18 @@
             left: -10px;
         }
     }
+    .slick-dots {
+        bottom: 5px;
+        left: -180px;
+        @media (max-width: 990px) {
+            bottom: -35px;
+            left: 0;
+        }
+    }
+    .slick-dots li button:before {
+        color: #3aa4dd;
+        font-size: 35px;
+    }
     .banner-slide {
         max-width: 550px;
         display: flex;
@@ -36,7 +55,8 @@
             max-width:auto;
         }
         @media (max-width: 990px) {
-            max-width: auto;
+            max-width: none;
+            margin-bottom: 50px;
         }
         .title-banner {
             margin-bottom: 10px;
@@ -53,19 +73,37 @@
                 font-size: .87rem;
             }
         }
+        .slick-slide {
+            margin: 0 10px;
+        }
         .btn-wrap {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 20px;
+            @media (max-width: 990px) {
+                flex-direction: column;
+                margin-bottom: 0;
+            }
             a {
                 display: block;
+                @media (max-width: 990px) {
+                    box-sizing: border-box;
+                }
             }
             a:first-child {
                 width: 40%;
                 margin-right: 20px;
+                @media (max-width: 990px) {
+                    width: 100%;
+                    margin: 0 0 10px 0;
+                }
             }
             a:last-child {
                 width: 60%;
+                @media (max-width: 990px) {
+                    width: 100%;
+                }
             }
         }
     }

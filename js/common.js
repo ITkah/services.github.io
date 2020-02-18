@@ -65,7 +65,15 @@ $( document ).ready(function() {
   $('.banner .single').slick({
     infinite: true,
     dots: true,
-    arrows: true
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 990,
+        settings: {
+          arrows: false
+        }
+      },
+    ]
   });
 
 });
