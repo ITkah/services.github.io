@@ -46,7 +46,10 @@
     position: absolute; }
   .header-top .tabs-maps-box {
     position: relative;
-    cursor: pointer; }
+    cursor: pointer;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
     @media (max-width: 990px) {
       .header-top .tabs-maps-box {
         display: -webkit-box;
@@ -78,11 +81,16 @@
     @media (max-width: 990px) {
       .header-top .tabs-maps-box br {
         display: none; } }
+    .header-top .tabs-maps-box:hover::before {
+      left: -50px; }
     .header-top .tabs-maps-box::before {
       position: absolute;
       left: -40px;
       top: -2px;
-      content: url(../img/header/metro.png); }
+      content: url(../img/header/metro.png);
+      -webkit-transition: .3s;
+      -o-transition: .3s;
+      transition: .3s; }
       @media (max-width: 990px) {
         .header-top .tabs-maps-box::before {
           left: 0px;
@@ -161,7 +169,8 @@
         top: -4px;
         left: 60px;
         background: transparent; } }
-  .lang-box p, .lang-box a {
+  .lang-box p,
+  .lang-box a {
     font: 500 1rem 'Montserrat', sans-serif;
     color: #3da5de; }
 
@@ -642,17 +651,20 @@ header .nav-desk-box-links {
 .team .slick-next:before {
   content: url(../img/icon/next.png); }
 
-.team .slick-prev:before, .team .slick-next:before {
+.team .slick-prev:before,
+.team .slick-next:before {
   opacity: 1; }
 
 .team .slick-next {
-  right: -15px; }
+  right: -15px;
+  z-index: 999; }
   @media (max-width: 576px) {
     .team .slick-next {
       right: -10px; } }
 
 .team .slick-prev {
-  left: -15px; }
+  left: -15px;
+  z-index: 999; }
   @media (max-width: 576px) {
     .team .slick-prev {
       left: -10px; } }

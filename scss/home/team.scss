@@ -5,17 +5,20 @@
     .slick-next:before {
         content: url(../img/icon/next.png);
     }
-    .slick-prev:before, .slick-next:before {
+    .slick-prev:before,
+    .slick-next:before {
         opacity: 1;
     }
     .slick-next {
         right: -15px;
+        z-index: 999;
         @media (max-width: 576px) {
             right: -10px;
         }
     }
     .slick-prev {
         left: -15px;
+        z-index: 999;
         @media (max-width: 576px) {
             left: -10px;
         }
@@ -48,7 +51,7 @@
             font: 700 1rem 'Montserrat', sans-serif;
             margin-bottom: 10px;
         }
-        .team-prof{
+        .team-prof {
             color: #717171;
             font: 300 .87rem 'Montserrat', sans-serif;
         }
