@@ -17,8 +17,22 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    background: url(../img/news/photo-2.png) center center no-repeat;
+    background: url(../img/news/photo-2.png);
+    background-size: center center;
+    background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,.3);
+        z-index: 2;
+        border-radius: 15px;
+    }
     @media (max-width: 576px) {
         height: 200px;
         padding: 15px;
@@ -26,6 +40,8 @@
     .news-text {
         color: #fff;
         font: 500 1rem 'Montserrat', sans-serif;
+        position: relative;
+        z-index: 3;
     }
 }
 

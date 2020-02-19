@@ -750,9 +750,9 @@ header .nav-link {
   .team .team-box img {
     top: -60px;
     position: absolute;
-    height: 110px;
+    height: 80px;
     max-width: 100%;
-    width: 110px;
+    width: 80px;
     border-radius: 50%; }
     @media (max-width: 576px) {
       .team .team-box img {
@@ -801,15 +801,30 @@ header .nav-link {
   -webkit-align-items: flex-end;
       -ms-flex-align: end;
           align-items: flex-end;
-  background: url(../img/news/photo-2.png) center center no-repeat;
-  background-size: cover; }
+  background: url(../img/news/photo-2.png);
+  background-size: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+  .news-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    border-radius: 15px; }
   @media (max-width: 576px) {
     .news-box {
       height: 200px;
       padding: 15px; } }
   .news-box .news-text {
     color: #fff;
-    font: 500 1rem 'Montserrat', sans-serif; }
+    font: 500 1rem 'Montserrat', sans-serif;
+    position: relative;
+    z-index: 3; }
 
 .news-box:first-child {
   grid-column-start: 1;
@@ -857,7 +872,7 @@ header .nav-link {
       grid-row-end: auto; } }
 
 footer {
-  background-color: #24252a; }
+  background: #24252a; }
 
 .footer-container {
   padding: 40px 0;
@@ -914,7 +929,8 @@ footer {
     @media (max-width: 576px) {
       .footer-box-link img {
         width: 250px; } }
-  .footer-box-link .link-footer {
+  .footer-box-link li a {
+    display: block;
     margin-bottom: 20px;
     color: #fff;
     font: 700 1rem 'Montserrat', sans-serif;
@@ -922,9 +938,9 @@ footer {
     position: relative;
     display: block; }
     @media (max-width: 990px) {
-      .footer-box-link .link-footer {
+      .footer-box-link li a {
         font-size: .9rem; } }
-    .footer-box-link .link-footer::before {
+    .footer-box-link li a::before {
       -webkit-transition: .2s;
       -o-transition: .2s;
       transition: .2s;
@@ -934,10 +950,8 @@ footer {
       left: 0;
       top: 1px;
       z-index: 2; }
-    .footer-box-link .link-footer:hover::before {
+    .footer-box-link li a:hover::before {
       left: -5px; }
-  .footer-box-link .link-footer:last-child {
-    margin-bottom: 0; }
 
 .footer-box-adress {
   display: -webkit-box;
@@ -1196,7 +1210,8 @@ h6 {
   margin: 0; }
 
 ul {
-  padding: 0; }
+  padding: 0;
+  list-style-type: none; }
 
 a {
   text-decoration: none;
