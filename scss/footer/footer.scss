@@ -42,21 +42,20 @@ footer {
 
 .footer-box-link {
     display: flex;
-        flex-direction: column;
-        img {
-            margin-bottom: 30px;
-            max-width: 100%;
-            height: auto;
-            @media (max-width: 990px) {
-                width: 200px;
-            }
-            @media (max-width: 576px) {
-                width: 250px;
-            }
+    flex-direction: column;
+    img {
+        margin-bottom: 30px;
+        max-width: 100%;
+        height: auto;
+        @media (max-width: 990px) {
+            width: 200px;
         }
-        li {
-
-        a{
+        @media (max-width: 576px) {
+            width: 90%;
+        }
+    }
+    li {
+        a {
             display: block;
             margin-bottom: 20px;
             color: #fff;
@@ -235,6 +234,8 @@ footer {
         margin-top: 40px;
         @media (max-width: 990px) {
             margin-top: 10px;
+            width: 100%;
+            justify-content: space-between;
         }
         a {
             margin: 0 10px;

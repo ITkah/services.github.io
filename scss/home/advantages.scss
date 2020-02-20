@@ -8,7 +8,8 @@
         grid-template-columns: 1fr 1fr;
     }
     @media (max-width: 576px) {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
         justify-items: center;
     }
 }
@@ -25,5 +26,8 @@
     p {
         text-align: center;
         font: 700 1rem 'Montserrat', sans-serif;
+        @media (max-width: 990px) {
+            font-size: .9rem;
+        }
     }
 }

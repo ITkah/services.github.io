@@ -5,10 +5,12 @@
     @media (max-width: 990px) {
         grid-template-columns: 1fr 1fr;
     }
-    @media (max-width: 380px) {
-        grid-template-columns: 1fr;
+    @media (max-width: 576px) {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
     }
 }
+
 .news-box {
     height: 220px;
     padding: 20px;
@@ -29,13 +31,13 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0,0,0,.3);
+        background: rgba(0, 0, 0, .3);
         z-index: 2;
         border-radius: 15px;
     }
     @media (max-width: 576px) {
         height: 200px;
-        padding: 15px;
+        padding: 10px;
     }
     .news-text {
         color: #fff;
@@ -64,7 +66,6 @@
         height: 200px;
     }
 }
-
 
 .news-box:nth-child(2) {
     grid-column-start: 2;

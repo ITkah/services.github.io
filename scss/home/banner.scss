@@ -14,12 +14,13 @@
     .slick-next:before {
         content: url(../img/banner/right.png);
     }
-
-    .slick-prev, .slick-next {
+    .slick-prev,
+    .slick-next {
         top: 94%;
         z-index: 999;
     }
-    .slick-prev:before, .slick-next:before {
+    .slick-prev:before,
+    .slick-next:before {
         opacity: 1;
         position: relative;
     }
@@ -53,7 +54,7 @@
         flex-direction: column;
         justify-content: center;
         @media (max-width: 1024px) {
-            max-width:auto;
+            max-width: auto;
         }
         @media (max-width: 990px) {
             max-width: none;
@@ -115,7 +116,8 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 25px;
     @media (max-width: 768px) {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
     }
     .banner-img-broken {
         position: relative;
@@ -199,6 +201,10 @@
             width: 100%;
             box-sizing: border-box;
             text-align: center;
+            @media (max-width: 990px) {
+                padding: 10px;
+                height: 60px;
+            }
             &::after {
                 content: '';
                 width: 100%;

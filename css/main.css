@@ -415,10 +415,12 @@ header .nav-link {
     content: url(../img/banner/left.png); }
   .container-banner .slick-next:before {
     content: url(../img/banner/right.png); }
-  .container-banner .slick-prev, .container-banner .slick-next {
+  .container-banner .slick-prev,
+  .container-banner .slick-next {
     top: 94%;
     z-index: 999; }
-  .container-banner .slick-prev:before, .container-banner .slick-next:before {
+  .container-banner .slick-prev:before,
+  .container-banner .slick-next:before {
     opacity: 1;
     position: relative; }
   .container-banner .slick-next {
@@ -525,7 +527,8 @@ header .nav-link {
   grid-gap: 25px; }
   @media (max-width: 768px) {
     .banner-phone-container {
-      grid-template-columns: 1fr; } }
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 15px; } }
   .banner-phone-container .banner-img-broken {
     position: relative;
     display: -webkit-box;
@@ -632,6 +635,10 @@ header .nav-link {
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
       text-align: center; }
+      @media (max-width: 990px) {
+        .banner-phone-container .banner-box-phone .banner-text {
+          padding: 10px;
+          height: 60px; } }
       .banner-phone-container .banner-box-phone .banner-text::after {
         content: '';
         width: 100%;
@@ -669,7 +676,8 @@ header .nav-link {
       grid-template-columns: 1fr 1fr; } }
   @media (max-width: 576px) {
     .advantages-container {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
       justify-items: center; } }
 
 .advantages-box {
@@ -696,6 +704,9 @@ header .nav-link {
   .advantages-box p {
     text-align: center;
     font: 700 1rem 'Montserrat', sans-serif; }
+    @media (max-width: 990px) {
+      .advantages-box p {
+        font-size: .9rem; } }
 
 .team .slick-prev:before {
   content: url(../img/icon/back.png); }
@@ -756,11 +767,15 @@ header .nav-link {
     border-radius: 50%; }
     @media (max-width: 576px) {
       .team .team-box img {
-        height: 100px;
-        width: 100px; } }
+        height: 70px;
+        width: 70px;
+        top: -30px; } }
   .team .team-box .team-name {
     font: 700 1rem 'Montserrat', sans-serif;
     margin-bottom: 10px; }
+    @media (max-width: 990px) {
+      .team .team-box .team-name {
+        margin-bottom: 5px; } }
   .team .team-box .team-prof {
     color: #717171;
     font: 300 .87rem 'Montserrat', sans-serif; }
@@ -780,9 +795,10 @@ header .nav-link {
   @media (max-width: 990px) {
     .news-container {
       grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 380px) {
+  @media (max-width: 576px) {
     .news-container {
-      grid-template-columns: 1fr; } }
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px; } }
 
 .news-box {
   height: 220px;
@@ -819,7 +835,7 @@ header .nav-link {
   @media (max-width: 576px) {
     .news-box {
       height: 200px;
-      padding: 15px; } }
+      padding: 10px; } }
   .news-box .news-text {
     color: #fff;
     font: 500 1rem 'Montserrat', sans-serif;
@@ -928,7 +944,7 @@ footer {
         width: 200px; } }
     @media (max-width: 576px) {
       .footer-box-link img {
-        width: 250px; } }
+        width: 90%; } }
   .footer-box-link li a {
     display: block;
     margin-bottom: 20px;
@@ -1131,7 +1147,12 @@ footer {
     margin-top: 40px; }
     @media (max-width: 990px) {
       .footer-box-feedback .social-box {
-        margin-top: 10px; } }
+        margin-top: 10px;
+        width: 100%;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between; } }
     .footer-box-feedback .social-box a {
       margin: 0 10px; }
 
@@ -1151,7 +1172,7 @@ footer {
             box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.5); }
   @media (max-width: 990px) {
     .btn-dark {
-      padding: 10px; } }
+      padding: 12px; } }
 
 .btn-transparent {
   color: #3aa4dd;
@@ -1168,7 +1189,7 @@ footer {
     background: #3aa4dd; }
   @media (max-width: 990px) {
     .btn-transparent {
-      padding: 10px; } }
+      padding: 12px; } }
 
 .title-xl {
   text-align: center;
