@@ -8,9 +8,22 @@
         grid-template-columns: 1fr 1fr;
     }
     @media (max-width: 576px) {
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 20px;
-        justify-items: center;
+        display: none;
+    }
+}
+
+.advantages-container-mob {
+    .slick-slide {
+        margin: 0 10px;
+    }
+    .slick-dots li button:before {
+        color: #3aa4dd;
+        font-size: 32px;
+    }  
+    display: none;
+    @media (max-width: 576px) {
+        display: block;
+        margin-bottom: 60px;
     }
 }
 
@@ -27,7 +40,9 @@
         text-align: center;
         font: 700 1rem 'Montserrat', sans-serif;
         @media (max-width: 990px) {
-            font-size: .9rem;
+            font: 700 .75rem 'Montserrat', sans-serif;
+            position: relative;
+            top: -12px;
         }
     }
 }

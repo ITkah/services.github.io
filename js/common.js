@@ -4,6 +4,37 @@ $(document).ready(function() {
         $(".lang-hide").fadeToggle(100);
     });
 
+    $(".map-box-call").on("click", function(){
+        $(".header-phone-mob").slideUp(100);
+        $("nav").slideUp(100);
+        $(".header-map-box").slideToggle(100);
+    });
+
+    $(".close-tab-map").on("click", function(){
+        $(".header-phone-mob").slideUp(100);
+        $("nav").slideUp(100);
+        $(".header-map-box").slideUp(100);
+    });
+
+    $(".phone-box-call").on("click", function(){
+        $(".header-map-box").slideUp(100);
+        $("nav").slideUp(100);
+        $(".header-phone-mob").slideToggle(100);
+    });
+
+    $(".close-tab-phone").on("click", function(){
+        $(".header-map-box").slideUp(100);
+        $("nav").slideUp(100);
+        $(".header-phone-mob").slideUp(100);
+    });
+
+    $(".menu-btn").on("click", function() {
+        $(".header-map-box").slideUp(100);
+        $(".header-phone-mob").slideUp(100);
+        $("nav").slideToggle(100);
+    });
+
+
     $(".nav-link-box").hover(
         function() {
             $(this).find(".hover-act").addClass("nav-link-active");
@@ -22,6 +53,8 @@ $(document).ready(function() {
         },
     );
 
+    
+
     $(window).resize(function() {
         if ($(window).width() < 990) {
             $('.desk-call-hover').unbind('mouseenter mouseleave');
@@ -32,10 +65,6 @@ $(document).ready(function() {
     $(".hover-act").on("click", function(e) {
         e.preventDefault();
         $(this).find("nav-desk-box-links").fadeToggle(100);
-    });
-
-    $(".btn-menu").on("click", function() {
-        $("nav").slideToggle(100);
     });
 
 
@@ -50,14 +79,17 @@ $(document).ready(function() {
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
-                    arrows: true
+                    arrows: false,
+                    dots: true
                 }
             },
             {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2
+                    slidesToScroll: 2,
+                    arrows: false,
+                    dots: true
                 }
             }
         ]
@@ -72,7 +104,21 @@ $(document).ready(function() {
             settings: {
                 arrows: false
             }
-        }, ]
+        },]
+    });
+
+    $('.advantages-container-mob .two-slider').slick({
+        infinite: true,
+        dots: true,
+        arrows: false,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+    });
+
+    $('.news-container-mob .single-2').slick({
+        infinite: true,
+        dots: true,
+        arrows: false,
     });
 
 });

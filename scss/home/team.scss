@@ -35,6 +35,9 @@
         align-items: center;
         position: relative;
         height: 110px;
+        @media (max-width: 650px) {
+            margin: 30px 0;
+        }
         img {
             top: -60px;
             position: absolute;
@@ -58,6 +61,21 @@
         .team-prof {
             color: #717171;
             font: 300 .87rem 'Montserrat', sans-serif;
+        }
+    }
+    .slick-slide {
+        margin: 0 10px;
+    }
+    .slick-dots li button:before {
+        color: #3aa4dd;
+        font-size: 32px;
+    }    
+    .slick-slide {
+        margin: 0 10px;
+    }
+    .container-team {
+        @media (max-width: 650px) {
+            margin-bottom: 50px;
         }
     }
 }
