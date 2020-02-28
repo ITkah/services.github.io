@@ -1,0 +1,27 @@
+.bredcrumbs {
+    margin: 30px 0;
+    .bredcrumbs-container {
+        padding-right: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        a {
+            color: #232323;
+            font: 600 .87rem 'Montserrat', sans-serif;
+            margin-right: 20px;
+            position: relative;
+            &::after {
+                content: '>';
+                position: absolute;
+                right: -14px;
+                top: 0;
+            }
+        }
+        span,
+        a:last-child {
+            opacity: .7;
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
